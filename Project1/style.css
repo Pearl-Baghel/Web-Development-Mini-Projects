@@ -1,0 +1,39 @@
+  @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans&family=Varela+Round&display=swap');
+
+  body {
+      background-color: antiquewhite;
+  }
+
+  * {
+      margin: 0;
+      padding: 0;
+  }
+
+  nav {
+      font-family: 'Shantell Sans', cursive;
+  }
+
+  nav ul {
+      display: flex;
+      list-style-type: none;
+      align-items: center;
+      height: 65px;
+      background-color: black;
+      color: white;
+  }
+
+  nav ul li {
+      padding: 0px 15px;
+  }
+
+  .brand img {
+      width: 52px;
+      padding: 0 5px;
+  }
+
+  .brand {
+      display: flex;
+      align-items: center;
+      font-weight: bolder;
+      font-size: 1.55rem;
+  }
