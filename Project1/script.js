@@ -20,12 +20,14 @@ let songs = [
 masterPlay.addEventListener('click', () => {
     if (audioElement.paused || audioElement.currentTime <= 0) {
         audioElement.play();
+        // gif.style.opacity = 1;
     }
 })
 masterPause.addEventListener('click', () => {
     if (audioElement.play) {
 
         audioElement.pause();
+  
     }
 })
 // Listen to events
