@@ -74,7 +74,7 @@
     border-radius: 25px;
   }
 .timespan{
-  margin: 0   25px;
+  margin: 0 15px;
 }
 .timespan i{
   cursor: pointer;
@@ -85,7 +85,7 @@
 
   .bottom {
     position: sticky;
-    height: 85px;
+    height: 105px;
     background-color: black;
     bottom: 0;
     display: flex;
@@ -95,7 +95,18 @@
     flex-direction: column;
 
   }
-
+  .songinfo{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 18vw;
+    padding: 50px;
+  
+  }
+.songinfo img {
+  opacity: 0;
+  transition: opacity 1s ease-in ;
+}
   .icons {
     /* padding: 10px; */
     margin: 10px;
