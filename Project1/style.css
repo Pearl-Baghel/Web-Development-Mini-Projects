@@ -101,6 +101,7 @@
     position: absolute;
     left: 18vw;
     padding: 50px;
+    font-family: 'Shantell Sans', cursive;
   
   }
 .songinfo img {
@@ -119,5 +120,5 @@
 
   #progressbar {
     width: 50vw;
-
+cursor: pointer;
   }
