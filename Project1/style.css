@@ -106,7 +106,7 @@
   }
 .songinfo img {
   opacity: 0;
-  transition: opacity 1s ease-in ;
+  transition: opacity 0.4s ease-in ;
 }
   .icons {
     /* padding: 10px; */

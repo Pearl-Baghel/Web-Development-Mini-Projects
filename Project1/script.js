@@ -5,6 +5,7 @@ let audioElement = new Audio('1.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let masterPause = document.getElementById('masterPause');
 let progressbar = document.getElementById("progressbar");
+let gif = document.getElementById('gif');
 
 let songs = [
     { songName: "Perfect", filePath: " ", coverPath: " " },
@@ -20,17 +21,18 @@ let songs = [
 masterPlay.addEventListener('click', () => {
     if (audioElement.paused || audioElement.currentTime <= 0) {
         audioElement.play();
-        // gif.style.opacity = 1;
+        gif.style.opacity = 1;
     }
 })
 masterPause.addEventListener('click', () => {
     if (audioElement.play) {
 
         audioElement.pause();
+        gif.style.opacity = 0;
   
     }
 })
 // Listen to events
-progressbar.addEventListener('timeupdate', () => {
+audioElement.addEventListener('timeupdate', () => {
     console.log('timeupdate');
 })
