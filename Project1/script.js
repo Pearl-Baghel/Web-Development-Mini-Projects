@@ -17,26 +17,26 @@ let songs = [
     { songName: "OOPS", filePath: "song/4.mp3 ", coverPath: "cover/4.jpg " },
     { songName: "BIBA", filePath: "song/5.mp3 ", coverPath: "cover/5.jpg " }
 ]
-songitem.forEach((element,i) => {
+songitem.forEach((element, i) => {
     // console.log(element , i);
     element.getElementsByTagName('img')[0].src = songs[i].coverPath;
     element.getElementsByClassName('songname')[0].innerText = songs[i].songName;
 
 });
 
-const makeAllPlays = ()=>{
-    Array.from(document.getElementsByClassName('songitemplay')).forEach(( element) =>{
+const makeAllPlays = () => {
+    Array.from(document.getElementsByClassName('songitemplay')).forEach((element) => {
         element.classList.remove('fa-pause-circle');
-    element.classList.add('fa-play-circle');
-})
+        element.classList.add('fa-play-circle');
+    })
 }
 
-Array.from(document.getElementsByClassName('songitemplay')).forEach((element)=>{
-    element.addEventListener('click', (e)=>{
+Array.from(document.getElementsByClassName('songitemplay')).forEach((element) => {
+    element.addEventListener('click', (e) => {
         makeAllPlays();
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
-    
+
     })
 })
 
@@ -54,7 +54,7 @@ masterPause.addEventListener('click', () => {
 
         audioElement.pause();
         gif.style.opacity = 0;
-  
+
     }
 })
 
@@ -62,11 +62,11 @@ masterPause.addEventListener('click', () => {
 audioElement.addEventListener('timeupdate', () => {
     // console.log('timeupdate');
     //update seek bar 
-    progress  = parseInt((audioElement.currentTime/audioElement.duration)*100); // progress percentage 
+    progress = parseInt((audioElement.currentTime / audioElement.duration) * 100); // progress percentage 
     // console.log(progress);
     progressbar.value = progress;
 })
-progressbar.addEventListener('change',()=>{
-    audioElement.currentTime= ((progressbar.value *audioElement.duration)/100);
+progressbar.addEventListener('change', () => {
+    audioElement.currentTime = ((progressbar.value * audioElement.duration) / 100);
 
 })
