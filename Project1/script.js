@@ -34,5 +34,13 @@ masterPause.addEventListener('click', () => {
 })
 // Listen to events
 audioElement.addEventListener('timeupdate', () => {
-    console.log('timeupdate');
+    // console.log('timeupdate');
+    //update seek bar 
+    progress  = parseInt((audioElement.currentTime/audioElement.duration)*100); // progress percentage 
+    // console.log(progress);
+    progressbar.value = progress;
+})
+progressbar.addEventListener('change',()=>{
+    audioElement.currentTime= ((progressbar.value *audioElement.duration)/100);
+
 })
