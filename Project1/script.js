@@ -1,20 +1,28 @@
 console.log("Welcome to Groove");
 //Initialize the variable
 let songIndex = 0;
-let audioElement = new Audio('1.mp3');
+let audioElement = new Audio('song/0.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let masterPause = document.getElementById('masterPause');
 let progressbar = document.getElementById("progressbar");
 let gif = document.getElementById('gif');
+let songitem = Array.from(document.getElementsByClassName('songitem'));
+
+let playpause = document.getElementsByClassName('far fa-play-circle')
 
 let songs = [
-    { songName: "Perfect", filePath: " ", coverPath: " " },
-    { songName: "Perfect", filePath: " ", coverPath: " " },
-    { songName: "Perfect", filePath: " ", coverPath: " " },
-    { songName: "Perfect", filePath: " ", coverPath: " " },
-    { songName: "Perfect", filePath: " ", coverPath: " " },
-    { songName: "Perfect", filePath: " ", coverPath: " " }
+    { songName: "Perfect", filePath: "song/0.mp3 ", coverPath: "cover/0.jpg " },
+    { songName: "Iraadey", filePath: "song/1.mp3 ", coverPath: "cover/1.jpg " },
+    { songName: "Malang Sajna", filePath: "song/2.mp3 ", coverPath: "cover/2.jpg " },
+    { songName: "Pyar Hota Kayi Bar Hai", filePath: "song/3.mp3 ", coverPath: "cover/3.jpg " },
+    { songName: "OOPS", filePath: "song/4.mp3 ", coverPath: "cover/4.jpg " },
+    { songName: "BIBA", filePath: "song/5.mp3 ", coverPath: "cover/5.jpg " }
 ]
+songitem.forEach((element,i) => {
+    console.log(element , i);
+    element.getElementsByTagName('img')[0].src = songs[i].coverPath;
+    element.getElementsByClassName('songname')[0].innerText = songs[i].songName;
+});
 
 // audioElement.play();
 //Handle play pause click
@@ -32,6 +40,7 @@ masterPause.addEventListener('click', () => {
   
     }
 })
+
 // Listen to events
 audioElement.addEventListener('timeupdate', () => {
     // console.log('timeupdate');
