@@ -6,13 +6,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #000;
     color: #999;
+
 }
 
 ul {
@@ -227,3 +227,36 @@ img{
     height: 2px;
     background-color: grey;
 }
+/* FAQ */
+
+h1{
+    font-size: 3rem;
+    margin: 2rem;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.FAQcontent h2{
+    font-size: 2rem;
+/* margin: 3rem; */
+margin-left: 15rem;
+margin-right: 15rem;
+background-color: var(--primary-color);
+padding: 3rem;
+/* padding-bottom: 1rem; */
+text-align: left;
+}
+
+.faq-answer {
+    font-weight: bold;
+    display: none;
+    font-size: 2rem;
+    /* margin: 3rem; */
+    margin-left: 15rem;
+    margin-right: 15rem;
+    background-color: var(--primary-color);
+    padding: 3rem;
+    text-align: left;
+    color: white;
+  }
+
