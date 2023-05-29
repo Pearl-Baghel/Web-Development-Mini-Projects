@@ -260,3 +260,7 @@ text-align: left;
     color: white;
   }
 
+  footer{
+    margin:15rem;
+    margin-bottom: 0;
+  }
